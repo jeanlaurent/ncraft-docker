@@ -90,7 +90,7 @@ Switch to Linux containers
 
 ## Inside a container (15)
 ```
-> docker run -s --rm -p 81:80 microsoft/iis:nanoserver
+> docker run -d --rm -p 81:80 microsoft/iis:nanoserver
 
 > docker ps
 
