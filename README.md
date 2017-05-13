@@ -144,7 +144,7 @@ In your working directory
 
 > tar -xf /data/nano.tar -C /data/extract
 
-    Explore on windows /user/{user}/data/extract
+    Explore on windows C:\Users\{user}\data\extract
 ```
 ### Describe app and the structure
 
