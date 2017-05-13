@@ -134,17 +134,15 @@ docker stop <containerId>
 ```
 In your working directory
 
-> mkdir app
+> mkdir extract
 ```
 ### Switch to Linux containers
 ```
 > docker run --rm -v c:/users:/data alpine ls /data
 
-> docker run -it --rm -v c:/users/bouca/nano.tar:/data alpine sh
+> docker run -it --rm -v c:/users/{user}:/data alpine sh
 
-> mkdir /data/extract
-
-> tar -xf /data/nano.tar -c /data/extract
+> tar -xf /data/nano.tar -C /data/extract
 
     Explore on windows /user/{user}/data/extract
 ```
