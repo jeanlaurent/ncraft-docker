@@ -110,6 +110,9 @@ Switch to Linux containers
 > echo "Rocks Docker for Windows" > index.htm
 
 [on the host, refresh the browser]
+
+docker stop <containerId>
+
 ```
 ## Inside an image (15)
 
