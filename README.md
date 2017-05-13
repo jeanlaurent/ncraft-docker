@@ -32,6 +32,8 @@ WIFI CODE
 
 ## What’s a container? (10)
 ```
+Switch to Linux containers
+
 > docker version
 
 > docker info
