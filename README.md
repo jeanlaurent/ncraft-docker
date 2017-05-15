@@ -30,8 +30,12 @@ WIFI CODE
  * Docker Toolbox
 
 
-## What’s a container? (10)
+# What’s a container? (10)
 ```
+> mkdir workshop
+
+> cd workshop
+
 Switch to Linux containers
 
 > docker version
@@ -50,7 +54,7 @@ Switch to Linux containers
 
 > docker rm <contain_id>
 ```
-### Switch to Windows Containers (15)
+#### Switch to Windows Containers (15)
 ```
 > docker version
 
@@ -88,7 +92,7 @@ Switch to Linux containers
 > docker run -it --rm microsoft/dotnet:nanoserver dotnet --version
 ```
 
-## Inside a container (15)
+# Inside a container (15)
 ```
 > docker run -d --rm -p 81:80 microsoft/iis:nanoserver
 
@@ -114,11 +118,11 @@ Switch to Linux containers
 docker stop <containerId>
 
 ```
-## Inside an image (15)
+# Inside an image (15)
 
 `docker save microsoft/iis:nanoserver -o iisnano.tar`
 
-### Switch to Linux containers
+#### Switch to Linux containers
 ```
 > docker ps
 
@@ -128,15 +132,15 @@ docker stop <containerId>
 
 > docker images
 ```
-### mount a volune
+## mount a volune
 
-### Shared Drives
+## Shared Drives
 ```
 In your working directory
 
 > mkdir extract
 ```
-### Switch to Linux containers
+#### Switch to Linux containers
 ```
 > docker run --rm -v c:/users:/data alpine ls /data
 
@@ -150,17 +154,21 @@ In your working directory
 
 > https://github.com/warpdesign/html5-solitaire-js
 
-## Setup the volume if need
+> git clone https://github.com/warpdesign/html5-solitaire-js.git
+
+> move html5-solitaire-js.git app
+
+### Setup the volume if need
 ```
 > docker run --rm -it -v .\app\:/usr/share/nginx/html -p 8080:80 nginx
 ```
-### Switch to Windows Containers
+#### Switch to Windows Containers
 ```
 > docker run --rm -it -v.\app\:/usr/share/nginx/html -p 8080:80 microsoft/iis
 ```
-## Copy concept (15)
+# Copy concept (15)
 
-### Switch to Linux containers
+#### Switch to Linux containers
 ```
 > docker run -d -p 80:80 nginx
 
@@ -172,9 +180,9 @@ In your working directory
 
 > docker history nginx:solitaire
 ```
-#### Dockefile for windows container (15)
+## Dockefile for windows container (15)
 
-### Switch to Windows Containers
+#### Switch to Windows Containers
 
 Edit Dockerfile
 ```
@@ -187,8 +195,16 @@ Edit Dockerfile
 
 > docker images
 
-> docker push ...
+> docker run --rm -d -p 81:80 iis:solitaire
+
+> docker ps
+
+> docker inspect <containerID>
+
+[peek the ip address]
+[on the host, browse the ip]
+
 ```
-## Composing applications (15)
+# Composing applications (15)
 
 https://github.com/dgageot/dockercon16
