@@ -183,16 +183,12 @@ In your working directory
 ## Dockefile for windows container (15)
 
 #### Switch to Windows Containers
-```
-> mkdir build
 
-> cd build
-```
 Edit Dockerfile
 ```
-    FROM microsoft/iis:nanoserver
+FROM microsoft/iis:nanoserver
 
-    COPY app c:/inetpub/wwwroot
+COPY app c:/inetpub/wwwroot
 ```
 ```
 > docker build -t iis:solitaire .
