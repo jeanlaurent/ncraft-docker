@@ -8,28 +8,27 @@ In this workshop, you will learn everything you need to know to get yourself up 
  * Jean-Laurent - Docker
  * Bruno - 42 SKILLZ
  
+Slides
+
  1. Docker the company
  2. Docker in France
  3. R&D
  4. Container vs VM
  5. Docker vocabulary
-
-WIFI CODE
+ 6. WifiCode
 
 ## Introduction & Prerequisites (15)
 
 ### Docker for Windows 10 >= 10586
  * Install Docker for Windows
- * Switch to windows containers
- * run `docker pull microsoft/iis:nanoserver`
+  * visit https://docs.docker.com/docker-for-windows/install/
+  * Choose the edge flavor
+  * Install it
+  * Switch to windows containers
+  * run `docker pull microsoft/iis:nanoserver`
  or
  * docker load -i d:\tar\microsoft-dotnet-nanoserver.tar
  * docker load -i d:\tar\microsoft-iis-nanoserver.tar
- 
-### Docker for Mac
- * Docker for Mac
-### Docker for Windows 7
- * Docker Toolbox
 
 
 # What’s a container? (10)
@@ -66,20 +65,20 @@ Switch to Linux containers
 
 > docker images
 
-    https://hub.docker.com/
+    go to https://hub.docker.com/
 
-    Seach "nanoserver"
+    Search "nanoserver"
 
-> docker run -it --rm microsoft/dotnet:nanoserver powershell
+> docker run -it --rm microsoft/nanoserver powershell
 
 > ps
 
 > ls
 ```
 
-[Lauch another powershell side by side with the previous]
+[Launch another powershell side by side with the previous]
 ```
-> docker run -it --rm microsoft/dotnet:nanoserver powershell
+> docker run -it --rm microsoft/nanoserver powershell
 
 > ps
 
@@ -135,6 +134,14 @@ docker stop <containerId>
 > docker images
 ```
 ## mount a volune
+c
+```
+> md c:/app
+
+> echo "Hello World" > c:/app/hello.txt
+
+> docker run -v c:/app:c:/ncraft microsoft/nanoserver powershell -c Get-Content c:/ncraft/hello.txt
+```
 
 ## Shared Drives
 ```
@@ -158,15 +165,15 @@ In your working directory
 
 > git clone https://github.com/warpdesign/html5-solitaire-js.git
 
-> move html5-solitaire-js.git app
+> move html5-solitaire-js.git to c:/app
 
 ### Setup the volume if need
 ```
-> docker run --rm -it -v .\app\:/usr/share/nginx/html -p 8080:80 nginx
+> docker run --rm -it -v c:/app:/usr/share/nginx/html -p 8080:80 nginx
 ```
 #### Switch to Windows Containers
 ```
-> docker run --rm -it -v.\app\:/usr/share/nginx/html -p 8080:80 microsoft/iis
+> docker run --rm -it -v c:/app:/usr/share/nginx/html -p 8080:80 microsoft/iis
 ```
 # Copy concept (15)
 
@@ -182,7 +189,7 @@ In your working directory
 
 > docker history nginx:solitaire
 ```
-## Dockefile for windows container (15)
+## Dockerfile for windows container (15)
 
 #### Switch to Windows Containers
 
