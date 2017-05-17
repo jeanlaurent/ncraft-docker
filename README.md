@@ -22,10 +22,12 @@ WIFI CODE
  * Install Docker for Windows
  * Switch to windows containers
  * run `docker pull microsoft/iis:nanoserver`
+ or
+ * docker load -i d:\tar\microsoft-dotnet-nanoserver.tar
+ * docker load -i d:\tar\microsoft-iis-nanoserver.tar
  
 ### Docker for Mac
  * Docker for Mac
- 
 ### Docker for Windows 7
  * Docker Toolbox
 
