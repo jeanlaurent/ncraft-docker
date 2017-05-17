@@ -134,13 +134,25 @@ docker stop <containerId>
 > docker images
 ```
 ## mount a volune
-c
+
 ```
 > md c:/app
 
-> echo "Hello World" > c:/app/hello.txt
+> echo "Hello" > c:/app/hello.txt
 
 > docker run -v c:/app:c:/ncraft microsoft/nanoserver powershell -c Get-Content c:/ncraft/hello.txt
+
+> docker run -it -v c:/app:c:/ncraft microsoft/nanoserver powershell
+
+> ls
+
+> cd ncraft
+
+> echo "World" >> hello.txt
+
+> exit
+
+> Get-Content c:\app\hello.txt
 ```
 
 ## Shared Drives
