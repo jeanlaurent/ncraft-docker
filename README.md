@@ -183,11 +183,11 @@ In your working directory
 ## Dockefile for windows container (15)
 
 #### Switch to Windows Containers
-
+```
 > mkdir build
 
 > cd build
-
+```
 Edit Dockerfile
 ```
     FROM microsoft/iis:nanoserver
