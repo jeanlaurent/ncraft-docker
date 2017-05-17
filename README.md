@@ -144,9 +144,9 @@ In your working directory
 ```
 > docker run --rm -v c:/users:/data alpine ls /data
 
-> docker run -it --rm -v c:/users/{user}:/data alpine sh
+> docker run -it --rm -v c:/users/{user}/workshop:/data alpine sh
 
-> tar -xf /data/nano.tar -C /data/extract
+> tar -xf data/iisnano.tar -C data/extract
 
     Explore on windows C:\Users\{user}\data\extract
 ```
