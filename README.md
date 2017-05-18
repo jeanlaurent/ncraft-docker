@@ -229,4 +229,25 @@ COPY app c:/inetpub/wwwroot
 ```
 # Composing applications (15)
 
-https://github.com/dgageot/dockercon16
+https://github.com/jeanlaurent/wordpress-ncraft
+
+```
+version: '2'
+services:
+  blog:
+    image: wordpress:4.7.3-php5.6-apache
+    ports:
+      - "4343:80"
+    volumes:
+     - ./wordpress/:/var/www/html/
+    environment:
+      - WORDPRESS_DB_HOST=blog-db
+      - WORDPRESS_DB_PASSWORD=t8Bmtubzt7gPGM77Y
+
+  blog-db:
+    image: mariadb:10.1.22
+    ports:
+      - "3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=t8Bmtubzt7gPGM77Y
+```
