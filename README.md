@@ -133,27 +133,7 @@ docker stop <containerId>
 
 > docker images
 ```
-## mount a volune
-
-```
-> md c:/app
-
-> echo "Hello" > c:/app/hello.txt
-
-> docker run -v c:/app:c:/ncraft microsoft/nanoserver powershell -c Get-Content c:/ncraft/hello.txt
-
-> docker run -it -v c:/app:c:/ncraft microsoft/nanoserver powershell
-
-> ls
-
-> cd ncraft
-
-> echo "World" >> hello.txt
-
-> exit
-
-> Get-Content c:\app\hello.txt
-```
+## mount a volume
 
 ## Shared Drives
 ```
@@ -225,6 +205,27 @@ COPY app c:/inetpub/wwwroot
 [peek the ip address]
 [on the host, browse the ip]
 
+```
+
+### Modify a file 
+```
+> md c:/app
+
+> echo "Hello" > c:/app/hello.txt
+
+> docker run -v c:/app:c:/ncraft microsoft/nanoserver powershell -c Get-Content c:/ncraft/hello.txt
+
+> docker run -it -v c:/app:c:/ncraft microsoft/nanoserver powershell
+
+> ls
+
+> cd ncraft
+
+> echo "World" >> hello.txt
+
+> exit
+
+> Get-Content c:\app\hello.txt
 ```
 # Composing applications (15)
 
