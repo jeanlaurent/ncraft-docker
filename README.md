@@ -251,3 +251,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=t8Bmtubzt7gPGM77Y
 ```
+start all that with
+
+`docker-compose up`
